@@ -65,19 +65,19 @@ class HaasMDC {
     for(int i = 0; i < maxTools; i++) {
       ToolOffset tool = new ToolOffset();
       tool.toolNumber = i + 1;
-      sock.writeln('Offset X?');
+      sock.writeln('?Q600');
       tool.x = parseToolOffset(await events.next);
-      sock.writeln('Offset Y?');
+      sock.writeln('?Q600');
       tool.y = parseToolOffset(await events.next);
-      sock.writeln('Offset Z?');
+      sock.writeln('?Q600');
       tool.z = parseToolOffset(await events.next);
-      sock.writeln('Offset A?');
+      sock.writeln('?Q600');
       tool.a = parseToolOffset(await events.next);
-      sock.writeln('Offset B?');
+      sock.writeln('?Q600');
       tool.b = parseToolOffset(await events.next);
-      sock.writeln('Offset C?');
+      sock.writeln('?Q600');
       tool.c = parseToolOffset(await events.next);
-      sock.writeln('Offset P?');
+      sock.writeln('?Q600');
       tool.p = parseToolOffset(await events.next);
       offsets.add(tool);
     }
